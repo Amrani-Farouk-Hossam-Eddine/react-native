@@ -8,8 +8,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
-function Login({ navigation }) {
+function LoginDriver({ navigation }) {
   return (
     <View style={styles.container}>
       <Text className="text-[40px] font-bold text-gray-600">Login</Text>
@@ -20,7 +19,7 @@ function Login({ navigation }) {
       <TouchableOpacity
         style={styles.TouchableOpacity}
         onPress={() => {
-          navigation.navigate("Services");
+          navigation.navigate("DriverService");
         }}
       >
         <Text style={styles.text}>login</Text>
@@ -35,7 +34,7 @@ function Login({ navigation }) {
       <TouchableOpacity
         style={styles.TouchableOpacity}
         onPress={() => {
-          navigation.navigate("Register");
+          navigation.navigate("RegisterDriver");
         }}
       >
         <Text style={styles.text}>Register</Text>
@@ -46,10 +45,10 @@ function Login({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     padding: 40,
+    marginTop: 80,
     flex: 1,
     gap: 40,
     alignItems: "center",
-    marginTop: 80,
   },
   KeyboardAvoidingView: {
     gap: 40,
@@ -92,4 +91,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Login;
+export default LoginDriver;

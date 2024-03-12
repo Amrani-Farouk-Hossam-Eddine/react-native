@@ -15,14 +15,19 @@ function SecondePage({ navigation }) {
       <Text style={styles.order}>do you want to register as:</Text>
       <View style={styles.buttons}>
         <TouchableOpacity
-          style={[{ backgroundColor: "#828282" }, styles.TouchableOpacity]}>
+          style={[{ backgroundColor: "#828282" }, styles.TouchableOpacity]}
+          onPress={() => {
+            navigation.navigate("LoginDriver");
+          }}
+        >
           <Text style={styles.text}>Driver</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={[{ backgroundColor: "#33393C" }, styles.TouchableOpacity]}
           onPress={() => {
             navigation.navigate("Login");
-          }}>
+          }}
+        >
           <Text style={styles.text}>Clien</Text>
         </TouchableOpacity>
       </View>
@@ -55,10 +60,10 @@ const styles = StyleSheet.create({
   order: {
     fontSize: 40,
     textAlign: "center",
-    },
-    buttons: {
-        flexDirection: "row",
-        gap:50,
+  },
+  buttons: {
+    flexDirection: "row",
+    gap: 50,
   },
   TouchableOpacity: {
     width: 120,

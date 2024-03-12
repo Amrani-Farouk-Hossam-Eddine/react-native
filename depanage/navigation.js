@@ -10,6 +10,15 @@ import FirstPage from "./screens/FirstPage";
 import SecondePage from "./screens/SecondePage";
 import Login from "./screens/Login";
 import Register from "./screens/Register";
+import RegisterDriver from "./driverScreens/RegisterDriver";
+import LoginDriver from "./driverScreens/LoginDriver";
+import DriverService from "./driverScreens/DriverService";
+import DriverServiceInof from "./driverScreens/DriverServiceInfo";
+import CoursesHistory from "./driverScreens/CoursesHistory";
+import Coursat from "./driverScreens/Coursat";
+import DriverProfileScreen from "./driverScreens/DriverProfileScreen";
+import DriverMapScreen from "./driverScreens/DriverMapScreen";
+import CourseDone from "./driverScreens/CourseDone";
 
 const Stack = createNativeStackNavigator();
 
@@ -28,6 +37,15 @@ const Navigation = () => {
         <Stack.Screen name="FirstPage" component={FirstPage} />
         <Stack.Screen name="SecondePage" component={SecondePage} />
         <Stack.Screen name="Register" component={Register} />
+        <Stack.Screen name="RegisterDriver" component={RegisterDriver} />
+        <Stack.Screen name="LoginDriver" component={LoginDriver} />
+        <Stack.Screen name="DriverService" component={DriverService} />
+        <Stack.Screen name="DriverServiceInfo" component={DriverServiceInof} />
+        <Stack.Screen name="CoursesHistory" component={CoursesHistory} />
+        <Stack.Screen name="Coursat" component={Coursat} />
+        <Stack.Screen name="DriverProfile" component={DriverProfileScreen} />
+        <Stack.Screen name="DriverMap" component={DriverMapScreen} />
+        <Stack.Screen name="CourseDone" component={CourseDone} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -1,6 +1,6 @@
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import {
-  Animated,
   KeyboardAvoidingView,
   StyleSheet,
   Text,
@@ -8,37 +8,22 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
-function Login({ navigation }) {
+function RegisterDriver() {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
-      <Text className="text-[40px] font-bold text-gray-600">Login</Text>
+      <Text className="text-[40px] font-bold text-gray-600">Register</Text>
       <KeyboardAvoidingView style={styles.KeyboardAvoidingView}>
         <TextInput placeholder="enter your username" style={styles.input} />
         <TextInput placeholder="enter your phone" style={styles.input} />
+        <TextInput placeholder="enter password" style={styles.input} />
       </KeyboardAvoidingView>
+
       <TouchableOpacity
         style={styles.TouchableOpacity}
-        onPress={() => {
-          navigation.navigate("Services");
-        }}
+        onPress={() => navigation.navigate("LoginDriver")}
       >
-        <Text style={styles.text}>login</Text>
-      </TouchableOpacity>
-      <View style={styles.lines}>
-        <View style={styles.line}></View>
-        <Text style={{ color: "#909090", fontSize: 15, lineHeight: 15 }}>
-          or
-        </Text>
-        <View style={styles.line}></View>
-      </View>
-      <TouchableOpacity
-        style={styles.TouchableOpacity}
-        onPress={() => {
-          navigation.navigate("Register");
-        }}
-      >
-        <Text style={styles.text}>Register</Text>
+        <Text style={styles.text}>Regester</Text>
       </TouchableOpacity>
     </View>
   );
@@ -46,10 +31,10 @@ function Login({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     padding: 40,
+    marginTop: 110,
     flex: 1,
     gap: 40,
     alignItems: "center",
-    marginTop: 80,
   },
   KeyboardAvoidingView: {
     gap: 40,
@@ -78,18 +63,6 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "white",
   },
-  lines: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-
-    gap: 5,
-  },
-  line: {
-    flex: 1,
-    height: 2,
-    backgroundColor: "#909090",
-  },
 });
 
-export default Login;
+export default RegisterDriver;
